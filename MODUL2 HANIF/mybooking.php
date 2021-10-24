@@ -11,13 +11,14 @@
     $catering = isset($_POST['catering']) ? $_POST['catering'] : '' ;
     $decoration = isset($_POST['decoration']) ? $_POST['decoration'] : '' ;
     $sound_system = isset($_POST['sound_system']) ? $_POST['sound_system'] : '' ;
+    
     if($nama_gedung == "Nusantara Hall"){
         $total_price = $duration*2000;
     }else if($nama_gedung == "Garuda Hall"){
         $total_price = $duration*1000;
     }else{
         $total_price = $duration*500;
-    }    
+    }
 
     if (isset($_POST['add_service'])) {
         $add_service = $_POST['add_service'];
@@ -25,6 +26,7 @@
     else {
         $add_service = '';
     }
+
 ?>
 
 <!DOCTYPE html>
@@ -83,7 +85,19 @@
                         if (!empty($add_service)) {
                             echo '<ul>';
                             foreach ($add_service as $service) {
-                                echo '<li>' . $service . '</li>';
+                                if($service == "Catering") {
+                                    $total_price += 700;
+                                    echo '<li>' . $service . '</li>';
+                                }
+                                elseif($service == "Decoration") {
+                                    $total_price += 450;
+                                    echo '<li>' . $service . '</li>';
+                                }
+                                elseif($service == "Sound System") {
+                                    $total_price += 250;
+                                    echo '<li>' . $service . '</li>';
+                                }
+                                
                             }
                             echo '</ul>';
                         } else {
