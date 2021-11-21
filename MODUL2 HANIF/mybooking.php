@@ -74,12 +74,12 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row"><? rand(1,1000000)?></th>
-                        <td><? $name ?></td>
-                        <td><? $checkin ?></td>
-                        <td><? $checkout ?></td>
-                        <td><? $nama_gedung ?></td>
-                        <td><? $phone_number ?></td>
+                        <th scope="row"><?= rand(1,1000000)?></th>
+                        <td><?= $name ?></td>
+                        <td><?= $checkin ?></td>
+                        <td><?= $checkout ?></td>
+                        <td><?= $nama_gedung ?></td>
+                        <td><?= $phone_number ?></td>
                         <td style="text-align: left;"> <ul>
                             <?php
                             if (empty($add_service)) {
@@ -105,7 +105,7 @@
                             }
                             ?>
                         </ul></td>
-                        <td><? '$' . $total_price ?></td>
+                        <td><?= '$' . $total_price ?></td>
                     </tr>
                 </tbody>
             </table>

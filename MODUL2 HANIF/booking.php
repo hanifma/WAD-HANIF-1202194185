@@ -33,7 +33,8 @@
                     <div class="row">
                         <div class="col-img">
                             <img src="
-                                <? if($nama_gedung == 'Nusantara Hall') {
+                                <?php
+                                    if($nama_gedung == 'Nusantara Hall') {
                                         echo 'img-1.jpg';
                                     }
                                     else if ($nama_gedung == 'Garuda Hall') {
@@ -47,7 +48,7 @@
                         </div>
                         <div class="col">
                         <div class="card-body">
-                            <form action="mybooking.php" method="GET">
+                            <form action="mybooking.php" method="POST">
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Name</label>
                                     <input  name="name" type="text" value="Hanif_1202194185" class="form-control" readonly>
