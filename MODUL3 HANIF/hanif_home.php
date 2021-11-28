@@ -1,7 +1,7 @@
     <?php
 
         include('hanif_koneksi.php');
-        $query = "SELECT ALL FROM buku_table";
+        $query = "SELECT * FROM buku_table";
         $selects = mysqli_query($koneksi, $query);
 
     ?>
