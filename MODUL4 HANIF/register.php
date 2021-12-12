@@ -7,7 +7,7 @@
     }
 
     $message = "";
-    if (isset($_POST["registe"])) {
+    if (isset($_POST["register"])) {
         $nama = $_POST["nama"];
         $email = $_POST["email"];
         $no_hp = $_POST["no_hp"];

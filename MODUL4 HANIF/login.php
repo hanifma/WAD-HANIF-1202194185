@@ -20,7 +20,7 @@
             $remember_me = FALSE;
         }
         
-        $query = 'SELECT * FROM user WHERE email=$email';
+        $query = "SELECT * FROM user WHERE email='$email'";
         $result = mysqli_query($conn, $query);
 
         if ($result->num_rows == 0) {
