@@ -62,7 +62,7 @@
 
     </head>
 
-    <body style="background-color: #fffbda;">
+    <body class="container">
 
         <?php if ($_COOKIE["navbar"] == "light") : ?>
             <nav class="navbar navbar-expand-sm navbar-light bg-light">
